@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/main_theme"
+    tools:context=".DetailActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="?attr/colorPrimary">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/detail_photo"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@mipmap/profile"
+                    app:civ_border_color="?attr/colorOnPrimary"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/detail_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    style="@style/header_text"
+                    app:layout_constraintEnd_toEndOf="@+id/detail_photo"
+                    app:layout_constraintStart_toStartOf="@+id/detail_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/detail_photo" />
+
+                <TextView
+                    android:id="@+id/detail_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    style="@style/subheader1_text"
+                    app:layout_constraintEnd_toEndOf="@+id/detail_username"
+                    app:layout_constraintStart_toStartOf="@+id/detail_username"
+                    app:layout_constraintTop_toBottomOf="@+id/detail_username" />
+
+                <TextView
+                    android:id="@+id/detail_followers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    style="@style/desc_text"
+                    app:layout_constraintEnd_toEndOf="@+id/detail_following"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/detail_name" />
+
+                <TextView
+                    android:id="@+id/detail_following"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    style="@style/desc_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/detail_followers"
+                    app:layout_constraintTop_toBottomOf="@+id/detail_name" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/detail_favourite"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/rounded_square"
+                    android:gravity="center"
+                    android:textColor="?attr/colorPrimary"
+                    android:layout_marginHorizontal="50dp"
+                    android:text="@string/add_to_fav"
+                    style="@style/desc_text"
+                    />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    app:tabGravity="center"
+                    app:tabTextColor="?attr/colorOnPrimary"
+                    app:tabSelectedTextColor="?attr/colorSecondary"/>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="1000dp"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="30dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminateTint="?attr/colorOnSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,59 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.GithubAPI" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue_400</item>
+        <item name="colorPrimaryDark">@color/blue_900</item>
+        <item name="colorPrimaryVariant">@color/blue_800</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blue_100</item>
+        <item name="colorSecondaryVariant">@color/blue_50</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="main_theme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">?attr/colorPrimary</item>
+    </style>
+    <style name="header_text">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:fontFamily">@font/opensans_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">Sample Text</item>
+    </style>
+    <style name="subheader_text">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:fontFamily">@font/opensans</item>
+        <item name="android:text">@string/sample</item>
+    </style>
+    <style name="subheader1_text">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:fontFamily">@font/opensans</item>
+        <item name="android:text">@string/sample</item>
+    </style>
+    <style name="desc_text">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:fontFamily">@font/opensans</item>
+        <item name="android:text">@string/sample</item>
+    </style>
+    <style name="search_bar">
+        <item name="android:hint">@string/search</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">24sp</item>`
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:fontFamily">@font/opensans</item>
+        <item name="android:background">@drawable/rounded_square1</item>
+    </style>
+
+
+</resources>
